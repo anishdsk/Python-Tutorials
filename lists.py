@@ -29,7 +29,7 @@ message = "Hello " + relatives[2]
 print(message)
 print()
 
-#modifying elements of a list
+# modifying elements of a list
 motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
 motorcycles[0] = 'ducati'
