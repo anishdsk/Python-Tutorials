@@ -1,4 +1,4 @@
-# lists in python
+# LISTS
 
 # list declaration and initialization
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
@@ -9,7 +9,7 @@ print(bicycles[0])
 print(bicycles[0].title())
 # to return last item in list, type"-1" as compartment number
 print(bicycles[-1])
-# to return second to last item in list, type "-2" as compartment number
+# to return second to last item in list, type "-2" as compartment number...so on
 print(bicycles[-2])
 
 # print statement using an element of a list
@@ -17,7 +17,7 @@ message = "My first bicycle was a " + bicycles[0].title() + "."
 print(message)
 print()
 
-#second list manipulation example
+# second list manipulation example
 relatives = ['mom', 'dad', 'uncle']
 print(relatives[0].title() + ", " + relatives[1].title() + ", " + relatives[2].title())
 
@@ -34,3 +34,43 @@ motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
 motorcycles[0] = 'ducati'
 print(motorcycles)
+print()
+
+# appending elements to the end of a list using the append() method
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+motorcycles.append("ducati")
+print(motorcycles)
+print()
+
+# adding an element to a list at any position using the insert() method
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles.insert(0, 'ducati') # inserts 'ducati' at position 0 of the list
+print(motorcycles)
+print()
+
+# removing an element of a list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+del motorcycles[0] # del statement deletes a chosen element of a list
+print(motorcycles)
+popped_motorcycle = motorcycles.pop() # pop() removes last element from list and allows that last element to be worked with/on
+print(motorcycles)
+print(popped_motorcycle)
+motorcycles.append('kawasaki')
+first_owned = motorcycles.pop(0) # pops element at index 0 of list
+print("The first motorcycle I owned was a " + first_owned.title() + ".")
+print()
+
+# removing an item by value -> useful when you do not know the index of a list element -> use remove() method
+# remove() method DELETES ONLY THE FIRST OCCURENCE of the value. If the value occurs twice,
+# then you'll have to use a loop to determine if all occurences have been removed
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+motorcycles.remove('ducati')
+print(motorcycles)
+# using remove() to work with the removed element
+too_expensive = 'suzuki'
+motorcycles.remove(too_expensive)
+print("A " + too_expensive.title() + " is too expensive for me.")
+print()
