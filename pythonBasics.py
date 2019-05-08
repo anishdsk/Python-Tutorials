@@ -1,4 +1,4 @@
-# python basics
+# BASICS
 
 message = "hello"
 print(message)
@@ -12,7 +12,7 @@ print(name.upper()) # upper() = all uppercase
 print(name.lower()) # lower() = all lowercase
 print()
 
-#concatenation
+# concatenation
 secondMessage = "Hello " + name.title() + "!"
 print(secondMessage)
 print()
