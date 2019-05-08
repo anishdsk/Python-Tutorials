@@ -7,7 +7,7 @@ print(bicycles)
 print(bicycles[0])
 # title() will capitalize first letter
 print(bicycles[0].title())
-# to return last item in list, type"-1" as compartment number
+# to return last item in list, type "-1" as compartment number
 print(bicycles[-1])
 # to return second to last item in list, type "-2" as compartment number...so on
 print(bicycles[-2])
@@ -74,3 +74,35 @@ too_expensive = 'suzuki'
 motorcycles.remove(too_expensive)
 print("A " + too_expensive.title() + " is too expensive for me.")
 print()
+
+# organizing/sorting a list using the sort() method
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort() # will sort the list alphabetically. An irreversible change
+print(cars)
+# to reverse the alphabetical ordering, pass the arguement 'reverse=True' to sort()
+cars.sort(reverse=True)
+print(cars)
+print()
+
+# organizing/sorting a list using the sorted() function. This method sorts the list but
+# does not make the change permanent -> actual order of list will not change permanently in the end
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+print("Here is the sorted list:")
+print(sorted(cars))
+print("Here is the original list again:")
+print(cars)
+print()
+
+# printing a list in reverse order of its original order -> does not mean it sorts backward alphabetically
+# changes ordering permanently but you can revert back by using reverse() again
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+cars.reverse()
+print(cars)
+print()
+
+# use len() to find the length of a list
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+print(len(cars))
