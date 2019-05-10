@@ -1,6 +1,6 @@
 # MORE ADVANCED TOPICS RELATED TO LISTS
 
-# ***Python uses indentation to determine when a line(s) is conencted to the line above it
+# ***Python uses indentation to determine when a line(s) is connected to the line above it
 
 # using a for loop to loop through a list to print every single element
 magicians = ['alice', 'david', 'carolina']
@@ -45,6 +45,18 @@ print(max(digits))
 print(sum(digits))
 print()
 
-# List Comprehensions -> Builds a list of elements in a single line
+# list Comprehensions -> Builds a list of elements in a single line
 squares = [value**2 for value in range(1,11)]
 print(squares)
+print()
+
+# slicing a list
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3]) # prints the elements at indices 0, 1, and 2 -> last value printed is the (upper bound bracket value - 1) index
+print(players[-3:]) # outputs the last three players as the slicing starts from the third to last values
+print()
+
+# looping through a slice
+for player in players[:3]:
+    print(player.title()) #prints first three players
+print()
