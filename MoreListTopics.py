@@ -58,5 +58,11 @@ print()
 
 # looping through a slice
 for player in players[:3]:
-    print(player.title()) #prints first three players
+    print(player.title()) # prints first three players
 print()
+
+# copying a list
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friends_foods = my_foods[:] # [:] means all elements are selected in the slice
+print("My favorite foods are: " + str(my_foods))
+print("My friend's favorite foods are: " + str(friends_foods))
