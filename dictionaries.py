@@ -1,6 +1,6 @@
 # DICTIONARIES
 
-# dictionaries are a collection of key-value pairs. Similar to maps in Java
+# dictionaries are a collection of key-value pairs. Similar to Java maps
 
 # simple dictionary
 alien_0 = {'color': 'green', 'points': 5}
