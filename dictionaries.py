@@ -131,5 +131,3 @@ favorite_languages = {
 }
 for language in set(favorite_languages.values()): # when set( ) is used it builds a set out of the unique contents so no repetitions
     print(language.title())
-
-# nesting -> storing set of dicts in a list or a list as a value in a dict and so on...
