@@ -131,3 +131,68 @@ favorite_languages = {
 }
 for language in set(favorite_languages.values()): # when set( ) is used it builds a set out of the unique contents so no repetitions
     print(language.title())
+print()
+
+# Nesting
+
+# dictionaries in lists
+# make multiple dictionaries using range
+aliens = []
+# make 30 green aliens
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+# output the first five aliens
+for alien in aliens[:5]:
+        print(alien)
+print("...")
+# output the total count of aliens created
+print("Total number of aliens: " + str(len(aliens)))
+print()
+
+# changing individual elements of the dictionary
+for alien in aliens[0:3]: # changes the first three elements/aliens
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow',
+        alien['speed'] = 'medium',
+        alien['points'] = '10'
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red',
+        alien['speed'] = 'fast',
+        alien['points'] = 15
+# output the first five aliens
+for alien in aliens[:5]:
+        print(alien)
+print()
+
+# lists inside dictionaries
+# store information about a pizza being ordered
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+# summarize the order
+print("you ordered a " + pizza['crust'] + "-crust pizza " + "with the following toppings:")
+for topping in pizza['toppings']:
+    print("\t" + topping)
+
+# dictionaries in dictionaries
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton'
+        },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+    },
+}
+
+for username, user_info in users.items(): # 'username' holds keys and 'user_info' holds the values
+    print("\nUsername: " + username)
+    full_name = user_info['first'] + " " + user_info['last']
+    location = user_info['location']
+    print("\tFull Name: " + full_name.title())
+    print("\tLocation" + location.title())
