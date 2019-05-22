@@ -4,7 +4,9 @@
 # Tuples look exactly like lists except the brackets become PARANTHESIS ONLY FOR DECLARATION AND INITIALIZATION
 
 # tuples example
+print("Basic Tuples Example: ")
 dimensions = (200,50)
+print(dimensions)
 print(dimensions[0]) # bracket notation is still maintained here
 print(dimensions[1])
 print()
@@ -12,11 +14,13 @@ print()
 # 'dimensions[0] = 250' will throw error as it is changing an index's element
 
 # looping through all variables in a tuple
+print("Looping Through a Tuple: ")
 for dimension in dimensions:
     print(dimension)
 print()
 
 # writing over a tuple -> can't modify a tuple but can assign a new value to a variable that holds a tuple
+print("Rewriting an Entire Tuple: ")
 dimensions = (200,50)
 print("Original Dimensions:")
 for dimension in dimensions:
