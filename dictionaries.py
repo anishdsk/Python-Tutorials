@@ -99,7 +99,6 @@ friends = ['phil', 'sarah'] # list of keys with empty values
 print("Looping With Conditionals Example:")
 for name in favorite_languages.keys():
     print(name.title())
-
     if name in friends:
         print("Hi " + name.title() + ", I see your favorite language is " + favorite_languages[name].title() + "!")
 print()
@@ -189,6 +188,7 @@ print("you ordered a " + pizza['crust'] + "-crust pizza " + "with the following 
 for topping in pizza['toppings']:
     print("\t" + topping)
 print()
+
 # dictionaries in dictionaries
 users = {
     'aeinstein': {
