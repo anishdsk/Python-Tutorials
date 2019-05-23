@@ -26,12 +26,6 @@ alien_0['x_position'] = 0
 alien_0['y-position'] = 25
 print(alien_0)
 
-alien_0 = {}
-alien_0['color'] = 'green'
-alien_0['points'] = 5
-print(alien_0)
-print()
-
 # modifying an element of a dictionary
 print("Modifying an Element of a Dictionary:")
 print(alien_0['color'])
