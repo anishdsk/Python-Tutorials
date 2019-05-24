@@ -49,7 +49,7 @@ print()
 
 # returning a Dictionary
 print("Creating a Function to Return and Output a Dictionary: ")
-def build_person(first_name, last_name, age=''): # age is optional param
+def build_person(first_name, last_name, age=''): # age is optional param -> has an empty string value until assigned something
     """Return a dictionary of information about a person."""
     person = {'first': first_name, 'last': last_name}
     if age:
