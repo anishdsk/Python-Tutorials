@@ -80,7 +80,7 @@ def print_models(unprinted_designs, completed_models):
     """Simulate printing each design until none are left. Move each design to completed_models after printing """
     while len(unprinted_designs) > 0:
         current_design = unprinted_designs.pop()
-        # simulate creating a 3d print from the design
+        # simulate creating a 3D print from the design
         print("Printing model: " + current_design)
         completed_models.append(current_design)
 
