@@ -76,7 +76,7 @@ print()
 
 # modifying a list using multiple functions -> modifications will be permanent
 print("Modifying a List Using Functions: ")
-def print_models(unprinted_designs, completed_models)
+def print_models(unprinted_designs, completed_models):
     """Simulate printing each design until none are left. Move each design to completed_models after printing """
     while len(unprinted_designs) > 0:
         current_design = unprinted_designs.pop()
@@ -102,10 +102,24 @@ print_models(unprinted_designs[:], completed_models) # 'unprinted_designs[:]' ma
 print()
 
 # passing an arbitrary number of Arguements -> useful when number of arguement needed isn't known beforehand
-def make_pizza(*toppings) # (*ParamaterName) accepts as many arguements as needed
+def make_pizza(*toppings): # (*ParamaterName) accepts as many arguements as needed
     """Print the list of toppings that have been requested"""
     print(toppings)
 
 make_pizza('pepperoni')
 make_pizza('mushrooms', 'green peppers', 'extra cheese')
+print()
+
+# using arbitrary keyword arguements
+def build_profile(first,last,**user_info): # '**user_info' -> the double asterisks create an empty dictionary called user_info and packs whatever name-value pairs it recives into this dict
+    """Build a dictionary containing everything we know about a user"""
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert', 'einstien', location = 'princeton', field = 'physics')
+print(user_profile)
 print()
