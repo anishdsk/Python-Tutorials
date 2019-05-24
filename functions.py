@@ -100,3 +100,12 @@ print()
 print("This Function Call Makes sure Original List is Not Modified, Only a Copy: ")
 print_models(unprinted_designs[:], completed_models) # 'unprinted_designs[:]' makes a copy slice of the entire list
 print()
+
+# passing an arbitrary number of Arguements -> useful when number of arguement needed isn't known beforehand
+def make_pizza(*toppings) # (*ParamaterName) accepts as many arguements as needed
+    """Print the list of toppings that have been requested"""
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+print()
