@@ -3,6 +3,10 @@
 # importing the module file
 import functionModule
 
+# importing just a/the specific function of the module file and using 'as' to give the function an alias name
+from functionModule import make_pizza as  mp
+
 # invoke the function
+print("Invoking the Function from the 'functionModule' File and Using it: ")
 functionModule.make_pizza(16, 'pepperoni')
 functionModule.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
