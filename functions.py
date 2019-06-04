@@ -98,7 +98,7 @@ print()
 
 # this function call will make sure the list that is passed in is NOT MODIFIED
 print("This Function Call Makes sure Original List is Not Modified, Only a Copy: ")
-print_models(unprinted_designs[:], completed_models) # 'unprinted_designs[:]' makes a copy slice of the entire list -> [:] is key
+print_models(unprinted_designs[:], completed_models) # 'unprinted_designs[:]' makes a copy slice of the entire list -> [:] is the key to this
 print()
 
 # passing an arbitrary number of Arguements -> useful when number of arguement needed isn't known beforehand
