@@ -139,18 +139,19 @@ class ElectricCar(Car): # name of parent class must be included in paranthSeses
         # this next line tells Python to call the __init__() class from "ElectricCar"'s parent class
         super().__init__(make, model, year)
         self.battery_size = 70 # creating a new attribute; can be associated with all instances of the 'ElectricCar' class but not 'Car' class
-        # next line creates a new instance of the 'Battery' class and stores it in the 'self.battery' attribute; any 'ElectricCar' instance will have a 'Battery' instance created automatically
+        # next line creates a new instance of the 'Battery' class (with a default size of 70 if no value is provided) and stores it in the 'self.battery' attribute
+        # any 'ElectricCar' instance will have a 'Battery' instance created automatically
         self.battery = Battery()
 
     # OVERRIDING
-    # to do this, define a method in the child class  with the same name as the method to be overriden in the parent class
+    # to do this, define a method in the child class with the same name as the method to be overriden in the parent class
     # electric cars dont need gas so we override the method to do something else
     # if someone tries to call the next method with an electric car, it will call this method instead of the method in the 'Car' class
     def fill_gas_tank(self):
         """Electric cars don't have gas tanks"""
         print("This car doesn't need a gas tank.")
 
-# next line calls the __init() method defined in ElectricCar which then calls the __init__() method in the parent class 'Car'
+# next line calls the __init() method defined in 'ElectricCar' which then calls the __init__() method in the parent class 'Car'
 print("Creating and Using a New Child Class ('ElectricCar') of the Parent Class ('Car'): ")
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
