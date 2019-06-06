@@ -1,7 +1,7 @@
 # CLASSES and INHERITANCE
 
 # involves object-oriented programming
-# ***A function that is part of a class is a method
+# **A function that is part of a class is a method
 
 # class example
 class Dog():
@@ -77,6 +77,13 @@ class Car():
         """Add the given amount to the odometer reading"""
         self.odometer_reading += miles
 
+    # method added to explain OVERRIDING later in the file
+    def fill_gas_tank(self):
+        """Fully filling up gas tank"""
+        print("Your gas tank is filling up")
+        print("...")
+        print("Your gas tank is now full")
+
 print("The Output of the Car Class's Attributes and Methods:")
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
@@ -101,6 +108,53 @@ my_used_car.update_odometer(23500)
 my_used_car.read_odometer()
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
+print()
 
 
-# INHERITANCE is when one class takes on all the attributes and methods of the first class
+# INHERITANCE is when one class (child class) takes on all the attributes and methods of the first class (parent class)
+
+# COME BACK TO THIS METHOD AFTER ANALYZING THE 'ElectricCar' CLASS FURTHER BELOW
+# Splitting large classes into multiple classes
+# the following 'ElectricCar' class has a lot of info about batteries so break the battery attribute information into a seperate class that stores all battery info
+class Battery():
+    """A simple attempt to model a battery for an electric car."""
+
+    def __init__(self, battery_size=70):
+        """Initialize the battery's Attributes"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+
+# continuation from line 114
+# the parent class must be in the same file as the child class and appear before/above the child class
+# a child class of the 'Car' class is defined
+class ElectricCar(Car): # name of parent class must be included in paranthSeses
+    """Represent a type of car - an electric car"""
+
+    def __init__(self, make, model, year): # takes in the info required to make an instance of 'Car'
+        """Initialize attributes of the parent class"""
+        # super() function allows connections to be made between the child and parent class.
+        # this next line tells Python to call the __init__() class from "ElectricCar"'s parent class
+        super().__init__(make, model, year)
+        self.battery_size = 70 # creating a new attribute; can be associated with all instances of the 'ElectricCar' class but not 'Car' class
+        # next line creates a new instance of the 'Battery' class and stores it in the 'self.battery' attribute; any 'ElectricCar' instance will have a 'Battery' instance created automatically
+        self.battery = Battery()
+
+    # OVERRIDING
+    # to do this, define a method in the child class  with the same name as the method to be overriden in the parent class
+    # electric cars dont need gas so we override the method to do something else
+    # if someone tries to call the next method with an electric car, it will call this method instead of the method in the 'Car' class
+    def fill_gas_tank(self):
+        """Electric cars don't have gas tanks"""
+        print("This car doesn't need a gas tank.")
+
+# next line calls the __init() method defined in ElectricCar which then calls the __init__() method in the parent class 'Car'
+print("Creating and Using a New Child Class ('ElectricCar') of the Parent Class ('Car'): ")
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery() # call the newly created child class method
+my_tesla.fill_gas_tank() # calling the overriden method
+
+my_tesla.battery.describe_battery() # using 'battery' class's 'describe_battery' method since the '.battery' attribute has an instance of 'Battery()'
