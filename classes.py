@@ -1,8 +1,7 @@
-# CLASSES
+# CLASSES and INHERITANCE
 
 # involves object-oriented programming
 # ***A function that is part of a class is a method
-
 
 # class example
 class Dog():
@@ -28,7 +27,7 @@ class Dog():
 
     def roll_over(self):
         """simulate a dog rolling over"""
-        print(self.name.title() + "rolled over.")
+        print(self.name.title() + " rolled over.")
 
 # making an instance of the 'Dog' class
 print("Making an Instance of the 'Dog' Class and Using the Attributes:")
@@ -102,3 +101,6 @@ my_used_car.update_odometer(23500)
 my_used_car.read_odometer()
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
+
+
+# INHERITANCE is when one class takes on all the attributes and methods of the first class
