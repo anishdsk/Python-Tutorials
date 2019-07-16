@@ -10,7 +10,7 @@ class Dog():
     # the '__init()__' method is a special method run whenever an instance of a class is created
     # 'self' param is required and must be before the other params. Every method associated with a class automatically passes 'self', which is a reference to the instance itself.
     # 'self' gives instant access to attributes and methods in the class
-    # so no need to provid value for self, just the other params following it
+    # so no need to provide value for self, just the other params following it
     def __init__(self, name, age):
         """initialze name and age attributes"""
         # any variable prefixed with 'self' is available to every method in the class. These variables can be accessed by any instance of the class
@@ -127,6 +127,17 @@ class Battery():
         """Print a statement describing the battery size."""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
+    def get_range(self):
+        """Print a statement about the range this battery provides"""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = "This car can go approximately " + str(range)
+        message += " miles on a full charge."
+        print(message)
+
 # continuation from line 114
 # the parent class must be in the same file as the child class and appear before/above the child class
 # a child class of the 'Car' class is defined
@@ -155,7 +166,9 @@ class ElectricCar(Car): # name of parent class must be included in parantheses
 print("Creating and Using a New Child Class ('ElectricCar') of the Parent Class ('Car'): ")
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery() # call the newly created child class method
+my_tesla.battery.describe_battery() # call the newly created child class method
+my_tesla.battery.get_range()
 my_tesla.fill_gas_tank() # calling the overriden method
 
 my_tesla.battery.describe_battery() # using "Battery()"'s describe_battery' method since the '.battery' attribute has an instance of 'Battery()'
+my_tesla.battery.get_range() # using "Battery()"'s 'get_range' method
