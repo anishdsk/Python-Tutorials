@@ -10,11 +10,7 @@ class Dog():
     # the '__init()__' method is a special method run whenever an instance of a class is created
     # 'self' param is required and must be before the other params. Every method associated with a class automatically passes 'self', which is a reference to the instance itself.
     # 'self' gives instant access to attributes and methods in the class
-<<<<<<< HEAD
-    # so no need to provide a value for self, just the other params following it
-=======
     # so no need to provide value for self, just the other params following it
->>>>>>> ebac969927a23fd695d1ef37e1ee693f4f2f5244
     def __init__(self, name, age):
         """initialze name and age attributes"""
         # any variable prefixed with 'self' is available to every method in the class. These variables can be accessed by any instance of the class
