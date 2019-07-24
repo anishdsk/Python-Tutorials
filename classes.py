@@ -163,7 +163,7 @@ class ElectricCar(Car): # name of parent class must be included in parantheses
         print("This car doesn't need a gas tank.")
 
 # next line calls the __init() method defined in 'ElectricCar' which then calls the __init__() method in the parent class 'Car'
-print("Creating and Using a New Child Class ('ElectricCar') of the Parent Class ('Car'): ")
+print("Creating and Using a New Child Class ('ElectricCar') of the Parent Class ('Car') and Battery() Class: ")
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery() # call the newly created child class method
