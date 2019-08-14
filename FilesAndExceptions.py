@@ -69,5 +69,15 @@ with open(filename, 'a') as file_object: # second open() param 'a' is used to ap
 print("Using 'try-except' Blocks:") # if an error occurs try-except blocks can handle the error to make sure the program keeps running
 try:
     print(5/0)
-except ZeroDivisionError: # default error from python given whenever dividing by zero 
+except ZeroDivisionError: # default error from python given whenever dividing by zero
     print("You can't divide by zero!")
+
+print("Handling a 'FileNotFound' Exception:")
+filename = 'alice.txt'
+try:
+    with open(filename, encoding='utf-8') as f_obj: # encoding needed when system encoding is different from file encoding
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = "Sorry, the file " + filename + " does not exist."
+    print(msg)
+# NOTE: some systems may show 'IOError' instead of 'FileNotFound'
